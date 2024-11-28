@@ -1,0 +1,32 @@
+child: CircleAvatar(
+                radius: 90,
+                backgroundColor: Color(0XFFD9D9D9),
+                child: pickedimage != null
+                    ? ClipOval(
+                  child: Image.file(
+                    pickedimage!,
+                    width: 180,
+                    height: 180,
+                    fit: BoxFit.cover,
+                  ),
+                )
+                    : Icon(Icons.camera_alt_outlined,
+                    size: 90, color: Colors.orangeAccent),
+              ),
+
+
+
+
+
+
+child: pickedimage==null? CircleAvatar(
+                radius: 90,
+                backgroundColor: Color(0XFFD9D9D9),
+                child: Image.asset("assets/images/whatsapp.jpg",
+                  height: 50,
+                  fit: BoxFit.cover,
+                ),
+              ):CircleAvatar(
+                  radius: 80,
+                backgroundImage: FileImage(pickedimage!),
+              ),

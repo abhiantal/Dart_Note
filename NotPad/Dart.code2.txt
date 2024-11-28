@@ -1,0 +1,594 @@
+import 'package:flutter/material.dart';
+
+TextStyle mTextstyle11(
+{
+  Color textColor=Colors.redAccent,
+  FontWeight fontWeight = FontWeight.w800
+}
+    ){
+  return TextStyle(
+    fontSize: 44,
+    color: textColor,
+    fontWeight: fontWeight,
+  );
+}
+
+TextStyle mTextstyle21(
+{
+  Color textColor=Colors.orange,
+  FontWeight fontWeight = FontWeight.w500
+}
+    ) {
+  return TextStyle(
+      fontSize: 33,
+    color: textColor,
+    fontWeight: fontWeight,
+  );
+}
+
+TextStyle mTextstyle31(
+{
+  Color textColor=Colors.black,
+  FontWeight fontWeight = FontWeight.bold
+}) {
+  return TextStyle(
+      fontSize: 11,
+    color: textColor,
+    fontWeight: fontWeight,
+  );
+}
+
+TextStyle mTextstyle41(
+{
+  Color textColor=Colors.blue,
+  FontWeight fontWeight = FontWeight.w400
+}
+    ) {
+  return TextStyle(
+      fontSize: 22,
+    color: textColor,
+    fontWeight: fontWeight,
+  );
+}
+
+
+
+  body: Column(
+      children: [
+        // Text('hello world',style: Theme.of(context).textTheme.headlineLarge),
+        // Text('hello world',style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.green),),
+        // Text('hello world',style: Theme.of(context).textTheme.headlineLarge),
+        // Text('hello world',style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.green),),
+
+        Text('hello',style: mTextstyle11()),
+        Text('hello',style: mTextstyle21()),
+        Text('hello',style: mTextstyle31()),
+        Text('hello',style: mTextstyle41()),
+      ],
+    ),
+
+
+body: Card(
+      shadowColor: Colors.redAccent,
+      elevation: 20,
+      child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Text('Hello World', style: TextStyle(color: Colors.redAccent, fontSize: 22)),
+      ),
+    ),
+
+
+
+
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  var emailText = TextEditingController();
+  var passText = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange,//Theme.of(context).colorScheme.inversePrimary,
+        title: Text('Flutter Font'),
+      ),
+    body: Center(
+      child: Container(
+        width: 300,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              keyboardType: TextInputType.text,
+              controller: emailText,
+              obscureText: true,
+              obscuringCharacter: '-',
+              //enabled: false,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                   borderRadius: BorderRadius.circular(21),
+                   borderSide: BorderSide(
+                       color: Colors.deepOrange,
+                     width: 2,
+                   ),
+                 ),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(21),
+                    borderSide: BorderSide(
+                      color: Colors.blue,
+                      width: 2,
+                    ),
+                   ),
+                disabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(21),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                    width: 2,
+                  ),
+                ),
+                //suffixText: "User Exits",
+                hintText: 'enter email',
+                suffixIcon: IconButton(
+                    icon: Icon(Icons.access_time),
+                  onPressed: (){
+                      Text('Abhi');
+                  },
+                ),
+                prefixIcon: Icon(Icons.mail,color: Colors.grey),
+              ),
+            ),
+            Container(height: 11,),
+            TextField(
+              keyboardType: TextInputType.number,
+              controller: passText,
+              obscureText: true,
+              obscuringCharacter: '*',
+              enabled: true,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(21),
+                  borderSide: BorderSide(
+                    color: Colors.deepOrange,
+                    width: 2,
+                  ),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(21),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                    width: 2,
+                  ),
+                ),
+                disabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(21),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                    width: 2,
+                  ),
+                ),
+                //suffixText: "User Exits",
+                hintText: 'enter pass',
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.password),
+                  onPressed: (){
+                    Text('Abhi');
+                  },
+                ),
+                prefixIcon: Icon(Icons.pages,color: Colors.brown),
+                      )
+                  ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(11),
+                child: ElevatedButton(
+                    onPressed: (){
+                      String uemail = emailText.text.toString();
+                      String upass = passText.text;
+                      print('Email: $uemail, pass: $upass');
+                    },
+                    child: Text('Login')
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    ),
+
+
+
+  Widget build(BuildContext context) {
+
+    var time = DateTime.now();
+
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange,//Theme.of(context).colorScheme.inversePrimary,
+        title: Text('Flutter Font'),
+      ),
+    body: Center(
+        child: Container(
+          width: 200,
+            height: 200,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('current time: ${time.year}',style: TextStyle(fontSize: 25),),
+   //Text('current time: ${DateFormat("Hms").format(time)}',style: TextStyle(fontSize: 25),),
+                ElevatedButton(onPressed: (){
+                 setState(() {
+                 });
+                }, child: Text('Current Time'),),
+              ],
+            ))),
+
+
+
+   body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Select Data and time", style: TextStyle(fontSize: 25),),
+          ElevatedButton(
+            onPressed: () async {
+              DateTime? selectedDate = await showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(2020),
+                lastDate: DateTime(2025),
+              );
+              if (selectedDate != null) {
+                // Do something with the selectedDate
+                print('Selected date: ${selectedDate.day}-${selectedDate.month}-${selectedDate.year}');
+              }
+            },
+            child: Text('Select Date'),
+          ),
+          ElevatedButton(
+        onPressed: () async {
+          TimeOfDay? selectedTime = await showTimePicker(
+              context: context,
+              initialTime: TimeOfDay.now(),
+              initialEntryMode: TimePickerEntryMode.dial,
+          );
+          if(selectedTime!=null){
+            print("Time Selected: ,${selectedTime.hour}:${selectedTime.minute}");
+          }
+        }, child: Text("Select Time"),),
+        ],
+      ),
+    )
+
+  body: GridView.count(crossAxisCount: 3,
+        crossAxisSpacing: 11,
+        mainAxisSpacing: 11,
+        children: [
+          Container(color: arrColor[0],),
+          Container(color: arrColor[1],),
+          Container(color: arrColor[2],),
+          Container(color: arrColor[3],),
+          Container(color: arrColor[4],),
+          Container(color: arrColor[5],),
+          Container(color: arrColor[6],),
+          Container(color: arrColor[7],),
+
+          ],),
+
+
+ body: GridView.extent(maxCrossAxisExtent: 100,
+          crossAxisSpacing: 11,
+          mainAxisSpacing: 11,
+          children: [
+            Container(color: arrColor[0],),
+            Container(color: arrColor[1],),
+            Container(color: arrColor[2],),
+            Container(color: arrColor[3],),
+            Container(color: arrColor[4],),
+            Container(color: arrColor[5],),
+            Container(color: arrColor[6],),
+            Container(color: arrColor[7],),
+          ],),
+
+
+
+body: GridView.builder(
+        //ridDelegate: gridDelegate,
+        itemBuilder:  (context, index){
+          return Container(color: arrColor[index],);
+        },
+         itemCount: arrColor.length,
+         // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+         //   crossAxisCount: 3,
+         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+             maxCrossAxisExtent: 100,
+             mainAxisSpacing: 11,
+             crossAxisSpacing: 11,
+         ),
+    ),
+
+
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  callBack(){
+    print("Clicked!!");
+
+    body: ElevatedButton(
+    onPressed: callBack, child: Text("Click me!"),),
+    );
+
+
+
+
+ body: Container(
+      child: Column(
+        children: [
+          
+          Expanded(
+            flex: 2,
+              child: Container(
+                color: Colors.teal,
+                child: ListView.builder(itemBuilder: (context, index)=>
+                Padding(
+                  padding: const EdgeInsets.all(11),
+                  child: SizedBox(
+                    width: 100,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.pink,
+                    ),
+                  ),
+                ),
+                  itemCount: 20, scrollDirection: Axis.horizontal,
+                ),
+              ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.blueGrey,
+              child: ListView.builder(itemBuilder: (context, index)=> Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.green,
+                ),
+                title: Text("Name"),
+                subtitle: Text("Mob_no"),
+                trailing: Icon(Icons.ac_unit),
+              ),),),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.blue,
+              child: ListView.builder(itemBuilder: (context, index)=>
+                  Padding(
+                  padding: const EdgeInsets.all(11),
+                    child: Container(
+                      width: 200,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(11),
+                        color: Colors.green,
+                      ),
+                    ),
+                  ),
+                itemCount: 10, scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.deepPurple,
+            ),
+          ),
+        ],
+      ),
+    )
+
+
+
+ body: Container(
+      width: 200, height: 200,
+      child: Stack(
+        children: [
+          Container(
+            width: 150,
+            height: 150,
+            color: Colors.pink,
+          ),
+        Positioned(
+          top: 21, left: 21, right: 21, bottom: 21,
+          child: Container(
+          width: 100,
+          height: 100,
+          color: Colors.blue,
+          ),
+        ),
+        ],
+      ),
+    ),
+
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class RoundedButton extends StatelessWidget {
+  final String btnName;
+  final Icon icon;
+  final Color? bgColor;
+  final TextStyle? textStyle;
+  final VoidCallback? callback;
+
+  RoundedButton({
+    required this.btnName,
+    required this.icon,
+    this.bgColor = Colors.blue,
+    this.textStyle,
+    this.callback,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        if (callback != null) {
+          callback!();
+        }
+      },
+      child: Row(
+        children: [
+          icon,
+          SizedBox(width: 8), // Add some space between icon and text
+          Text(
+            btnName,
+            style: textStyle,
+          ),
+        ],
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: bgColor, // Replaced primary with backgroundColor
+        shadowColor: bgColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(21),
+            bottomLeft: Radius.circular(21),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+body:Center(
+      child: Column(
+        children: [
+          Container(
+            width: 130,
+            child:  RoundedButton(
+              btnName: "login",
+              icon: Icon(Icons.lock),
+              bgColor: Colors.green,
+              callback: (){
+                print("Login in!!");
+            },
+              textStyle: mTextstyle41(),
+            ),
+          ),
+          Container(height: 8),
+          Container(
+            width: 130,
+            child:  RoundedButton(
+              btnName: "Play",
+              icon: Icon(Icons.play_arrow),
+              bgColor: Colors.green,
+              callback: (){
+                print("Song played!!");
+              },
+              textStyle: mTextstyle41(),
+            ),
+          ),
+          Container(
+            width: 170,
+            child:  RoundedButton(
+              btnName: "Press",
+              icon: Icon(Icons.ac_unit),
+              callback: (){
+                print("way your are press me!!");
+              },
+              textStyle: mTextstyle21(),
+              //bgColor: Colors.red,
+            ),
+          ),
+        ],
+      ),
+    ),
+
+ body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Wrap(
+          direction: Axis.horizontal,
+          alignment: WrapAlignment.spaceEvenly,
+          spacing: 11,
+          runSpacing: 11,
+          children: [
+            Container(
+              width: 100, height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.orange,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.deepPurple,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.cyan,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.teal,
+            ),
+            Container(
+              width: 100, height: 100,
+              color: Colors.deepPurple,
+            ),
+          ],
+        ),
+      ),
+
+  body:  Wrap(
+       children: [
+         SizedBox.square(
+           dimension: 200,
+           child: ElevatedButton(
+               onPressed: (){},
+                child: Text("data",
+             style: TextStyle(fontSize: 50, color: Colors.deepPurple),
+                ),
+           ),
+         ),
+         SizedBox.square(
+           dimension: 200,
+           child: ElevatedButton(
+             onPressed: (){},
+             child: Text("data"),
+           ),
+         ),
+         SizedBox.square(
+           dimension: 200,
+           child: ElevatedButton(
+             onPressed: (){},
+             child: Text("data"),
+           ),
+         ),
+         SizedBox.square(
+           dimension: 200,
+           child: ElevatedButton(
+             onPressed: (){},
+             child: Text("data"),
+           ),
+         ),
+       ],
+     ),
+
+
+

@@ -1,0 +1,453 @@
+   body: Text('Hello',style: TextStyle(
+        fontSize: 40,
+        color: Colors.teal,
+        fontWeight: FontWeight.w900,
+        backgroundColor: Colors.blueAccent,
+
+
+// body: Center(
+  //   child: Container(
+  //   width: 100,
+  //   height: 100,
+  //   color: Colors.limeAccent,
+  //   child: Text ('Hello Devops'),
+  // )
+  // ),
+    
+body: Center(
+  child: Container(
+      width: 200,
+      height: 100,
+      color: Colors.blue,
+      child: Center(child: Text('Hello center ', style: TextStyle(color: Colors.deepOrange),)),
+  ),
+)
+);
+
+ body: TextButton(
+          child: Text('Click here'),
+          onPressed: (){
+            print('Text Dutten Tapped');
+          },
+          onLongPress: (){
+            print('LongPressed');
+          },
+      )
+
+
+ body: ElevatedButton(
+        child: Text('Buttton'),
+          onPressed: (){
+            print('Button pressed');
+          },
+     ),
+    );
+
+body:OutlinedButton(
+    onPressed: (){
+      print('OutLine Button');
+    },
+    child: Text('OutLineButtonj'),
+      )
+
+
+body: Center(
+        child: Container(
+          width: 100,
+          height: 100,
+            child: Image.asset('assets/imags/whatsapp.jpg')),
+        )
+
+body: Column(
+        children: [
+          Text('Abhi',style: TextStyle(fontSize: 30),),
+          Text('Abhishak',style: TextStyle(fontSize: 30),),
+          Text('naveen',style: TextStyle(fontSize: 30),),
+          Text('Antal',style: TextStyle(fontSize: 30),),
+        ],
+      ),
+
+ body: Row(
+        children: [
+          Text('Abhi',style: TextStyle(fontSize: 30),),
+          Text('Abhishak',style: TextStyle(fontSize: 30),),
+          Text('naveen',style: TextStyle(fontSize: 30),),
+          Text('Antal',style: TextStyle(fontSize: 30),),
+        ],
+      ),
+
+  body: Container(
+        width: 200,
+        height: 70,
+        child: Row(
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('A',style: TextStyle(fontSize: 30),),
+            Text('B',style: TextStyle(fontSize: 30),),
+            Text('C',style: TextStyle(fontSize: 30),),
+            Text('D',style: TextStyle(fontSize: 30),),
+            ElevatedButton(onPressed: (){
+            },
+                child: Text('Hello'))
+          ],
+        ),
+      ),
+
+body: Container(
+        // width: 200,
+        // height: 70,
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('A',style: TextStyle(fontSize: 30),),
+            Text('B',style: TextStyle(fontSize: 30),),
+            Text('C',style: TextStyle(fontSize: 30),),
+            Text('D',style: TextStyle(fontSize: 30),),
+            ElevatedButton(onPressed: (){
+            },
+                child: Text('Hello'))
+          ],
+        ),
+      ),
+
+body: Center(
+        child: InkWell(
+          onTap: (){
+            print('Tapped on Container');
+          },
+          onLongPress: (){
+            print('LongPress on Container');
+          },
+          onDoubleTap: (){
+            print('onDoubleTap on Container');
+          },
+         child: Container(
+          width: 200,
+          height: 200,
+          color: Colors.blue,
+           child:Center(
+             child: InkWell(
+               onTap: (){
+                 print('Text Widget Tapped');
+               },
+             child: Text('Click here',
+             style: TextStyle(fontSize: 30,fontWeight:  FontWeight.w400),
+           ),)),
+         ),
+        ),
+      ),
+
+ body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: 200,
+                        width: 200,
+                        color: Colors.teal,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: 200,
+                        width: 200,
+                        color: Colors.orange,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: 200,
+                        width: 200,
+                        color: Colors.green,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: 200,
+                        width: 200,
+                        color: Colors.blue,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: 200,
+                        width: 200,
+                        color: Colors.purpleAccent,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                height: 200,
+                //width: 200,
+                color: Colors.teal,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                height: 200,
+                //width: 200,
+                color: Colors.orange,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                height: 200,
+                //width: 200,
+                color: Colors.green,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                height: 200,
+                //width: 200,
+                color: Colors.blue,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                height: 200,
+                //width: 200,
+                color: Colors.purpleAccent,
+              ),
+            ],
+          ),
+        ),
+      ),
+
+
+ body: Center(
+       child: Padding(
+         padding: const EdgeInsets.all(8.0),
+         child: ListView(
+           //scrollDirection: Axis.horizontal,
+           scrollDirection: Axis.vertical,
+           reverse: true,
+           children: [
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('one', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('Two', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('Three', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('Four', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('Five', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),),
+             ),
+           ],
+         ),
+       ),
+     ),
+    );
+
+    body: ListView.builder(itemBuilder: (context, index) {
+      return Text(arrname[index], style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),);
+    },
+    itemCount: arrname.length,
+      //reverse: true,
+      itemExtent: 200,
+      scrollDirection: Axis.horizontal,
+    ),
+
+
+body: ListView.separated(itemBuilder: (context, index) {
+      return Row(
+        children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(arrname[index], style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),),
+        ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(arrname[index], style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(arrname[index], style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),),
+          )
+        ],
+      );
+    },
+    itemCount: arrname.length,
+      separatorBuilder: (context, index) {
+        return Divider(height: 100, thickness: 5,);
+      },
+    ),
+
+    body: Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.blue.shade50,
+      child: Center(
+        child: Container(
+          width: 150,
+          height: 150,
+          //color:  Colors.blue,
+          decoration: BoxDecoration(
+            color: Colors.cyan,
+            //borderRadius: BorderRadius.circular(25)
+            //borderRadius: BorderRadius.only(topLeft: Radius.circular(25), bottomRight: Radius.circular(25))
+              //borderRadius: BorderRadius.all(Radius.circular(25),),
+              border: Border.all(
+              width: 5,
+            color: Colors.black
+          ),
+            boxShadow: [
+              BoxShadow(
+               blurRadius: 50,
+               color: Colors.greenAccent,
+               spreadRadius: 2,
+              ),
+            ],
+              shape: BoxShape.circle,
+          ),
+        ),
+      ),
+    ),
+
+ body: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(
+          flex: 2,
+          child: Container(
+            width: 50,
+            height: 150,
+            color: Colors.blue,
+          ),
+        ),
+        Expanded(
+          flex: 3,
+          child: Container(
+            width: 50,
+            height: 150,
+            color: Colors.greenAccent,
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            width: 50,
+            height: 150,
+            color: Colors.amber,
+          ),
+        ),
+        Expanded(
+          flex: 4,
+          child: Container(
+            width: 50,
+            height: 150,
+            color: Colors.deepOrange,
+          ),
+        ),
+      ],
+    ),
+
+   body: const Padding(
+      padding: EdgeInsets.all(44),
+      //padding: EdgeInsets.only(top: 11, left: 44),
+      child: Text('Hello world', style: TextStyle(fontSize: 25),),
+    ),
+
+body:Container(
+      color: Colors.black,
+        margin: EdgeInsets.all(22),
+        child: Padding(
+          padding: EdgeInsets.only(top: 11, left: 11, bottom: 11, right: 11),
+          child: Text('Hello world', style: TextStyle(fontSize: 25, color: Colors.white),),
+        )),
+
+body: ListView.separated(itemBuilder: (context, index) {
+      return ListTile(
+        leading: Text('${index+1}'),
+        title: Text(arrname[index]),
+        subtitle: Text('Number'),
+        //trailing: Icon(Icon.whatsapp.jpg),
+        trailing: Icon(Icons.access_time_filled),
+      );
+    },
+    itemCount: arrname.length,
+      separatorBuilder: (context, index) {
+        return Divider(height: 20, thickness: 2,);
+      },
+    )
+
+
+ body: Center(
+      child: Container(
+        width: 100,
+        height: 100,
+        child: CircleAvatar(
+          child: Text('google', style: TextStyle(color: Colors.indigoAccent, fontSize: 30),),
+          backgroundImage: AssetImage('assets/imags/google.jpg'),
+          //backgroundColor: Colors.deepOrange,
+          //radius: 70,
+          maxRadius: 100,
+          minRadius: 50,
+        ),
+      ),
+    ),
+
+ body: Center(
+      child: CircleAvatar(
+        child: Container(
+          width: 70,
+          height: 70,
+          child: Column(
+            children: [
+              Container(
+                width: 40,
+                  height: 40,
+                  child: Image.asset('assets/imags/google.jpg')),
+              Text('Google', style: TextStyle(color: Colors.indigoAccent,fontSize: 20),),
+            ],
+          ),
+        ),
+        backgroundColor: Colors.green,
+        maxRadius: 70,
+      ),
+    ),
+
+
+body: Center(
+      child: Text(
+        'Hello ', style: TextStyle(fontFamily: 'FontName',fontWeight: FontWeight.w900,fontSize: 40),
+      ),
+    ),
+
+
+body: Column(
+      children: [
+        Text('hello world',style: Theme.of(context).textTheme.headlineLarge),
+        Text('hello world',style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.green),),
+        Text('hello world',style: Theme.of(context).textTheme.headlineLarge),
+        Text('hello world',style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.green),),
+      ],
+    ),
+
+
+//theme: ThemeData(
+       // primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.deepOrange),
+          headlineMedium: TextStyle(fontSize: 80,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+        ),
+      ),
